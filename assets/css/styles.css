@@ -497,57 +497,54 @@ svg {
 /*=============== CERTIFICATIONS ===============*/
 .certifications {
     background-color: var(--container-color);
-  }
-  
-  .certifications__container {
-    row-gap: 2rem;
-    justify-content: center;
-    padding-block: 1rem;
-  }
-  
-  .certifications__data {
-    position: relative;
-    border-radius: 1rem;
-    overflow: hidden;
-  }
-  
-  .cert__img {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .certifications__data {
-    position: absolute;
-    left: 0;
-    bottom: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 0%, #52acf6 120%);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border-radius: 1rem;
+    padding: 2rem; 
+}
+
+.certifications__container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap; 
     justify-content: center;
-    transition: bottom 0.4s; /* Add transition property */
-  }
-  
-  .certifications__name {
+    gap: 2rem; /
+}
+
+.certifications__item {
+    width: 300px; 
+    position: relative;
+}
+
+.cert__img {
+    width: 100%;
+    height: auto; 
+    border-radius: 1rem; 
+    overflow: hidden; 
+}
+
+.certifications__data {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 0%, #52acf6 100%);
+    padding: 1rem; 
+    box-sizing: border-box; 
+    transform: translateY(100%); 
+    transition: transform 0.4s; 
+}
+
+.certifications__item:hover .certifications__data {
+    transform: translateY(0); 
+}
+
+.certifications__name {
     color: var(--title-color);
     font-size: var(--small-font-size);
     margin-bottom: .25rem;
-  }
-  
-  .certifications__title {
+}
+
+.certifications__title {
     font-size: var(--h2-font-size);
-    margin-bottom: .74rem;
-  }
-  
-  .certifications__item:hover .certifications__data {
-    bottom: 0;
-  }
-  
+    margin-bottom: .5rem; 
+}  
   
 /*=============== CONTACT ===============*/
 .contact__container{
