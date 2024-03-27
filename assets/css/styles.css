@@ -413,7 +413,8 @@ svg {
   }
   
   .certifications__item:hover .certifications__data {
-    transform: translateY(-100%); 
+    transform: translateY(-50%); 
+    opacity: 0.5;
   }
   
   .certifications__name {
