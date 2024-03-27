@@ -704,12 +704,6 @@ svg {
   }
   .home__container,
   .about__conatiner,
-  .certifications__container {
-    flex-wrap: nowrap; 
-  }
-  .certifications__item {
-    width: calc(50% - 1rem); 
-  }
   .skills__container{
     grid-template-columns: repeat(2,1fr);
     align-items: center;
