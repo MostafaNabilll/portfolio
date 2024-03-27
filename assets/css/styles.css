@@ -410,7 +410,7 @@ svg {
   .certifications__data {
     position: relative; 
     width: 100%;
-    background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 0%, #52acf6 100%);
+    background: var(--container-color);
     padding: 1rem;
     box-sizing: border-box;
     transform: translateY(0); 
@@ -432,12 +432,12 @@ svg {
   }
   
   .certifications__list {
-    list-style: none; /* Remove default list styles */
-    padding: 0; /* Remove default padding */
+    list-style: none;
+    padding: 0; 
   }
   
   .certifications__item {
-    margin-bottom: 2rem; /* Add space between certification items */
+    margin-bottom: 2rem;
   }
   
   
