@@ -467,7 +467,7 @@ svg {
   margin-bottom: .75rem;
 }
 .services__title{
-  font-size: var(--h2-font-size);
+  font-size: var(--h3-font-size);
   margin-bottom: 1.5rem;
 }
 .services__subtitle{
