@@ -311,7 +311,7 @@ svg {
 }
 
 .home__img{
-  width: 900px;
+  width: 500px;
   transform: translateX(-120px);
 }
 /*=============== BUTTON ===============*/
@@ -397,9 +397,8 @@ svg {
 /*=============== CERTIFICATIONS ===============*/
 .certifications__container {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100%; /* Ensure the container takes up full height */
+    justify-content: center;
+    align-items: center; 
   }
   
   .certifications__data {
@@ -415,15 +414,17 @@ svg {
   .certifications__item:hover .certifications__data {
     transform: translateY(-100%); 
   }
-  
+
   .certifications__name {
     color: var(--title-color);
     font-size: var(--small-font-size);
-    margin-bottom: 0.5rem;
-  }
-  
+    margin: 0; 
+    text-align: center; 
+
   .cert__img {
+    height: auto;
     border-radius: 1rem;
+    margin-bottom: 0.5rem; 
   }
   
   .certifications__list {
@@ -434,8 +435,6 @@ svg {
   .certifications__item {
     margin-bottom: 2rem;
   }
-  
-  
   
 /*=============== SERVICES ===============*/
 .services__conatiner{
