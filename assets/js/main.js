@@ -50,7 +50,7 @@ const contactForm = document.getElementById('contact-form'),
 const sendEmail = (e) => {
   e.preventDefault();
   console.log("Email form submitted");
-  emailjs.sendForm('service_h1d7wpg', 'template_rmx9s64', '#contact-form', '-z7B5Su3_TeQ7CZO1')
+  emailjs.sendForm('service_jkf0yra', 'template_ghlew1n', '#contact-form', '1adDy5qMO3Z8mWHpX')
     .then(() => {
       console.log("Email sent successfully");
       setTimeout(() => {
@@ -103,6 +103,7 @@ const sr = ScrollReveal({
   delay: 400,
   reset: true
 });
+
 sr.reveal('.home__data, .home__social, .contact__container, .footer__container');
 sr.reveal('.home__image', {origin:'bottom'});
 sr.reveal('.about__data, .skills__data', {origin:'left'});
