@@ -351,9 +351,6 @@ svg {
 .about__blob path{
   stroke: var(--first-color);
 }
-Here's the combined CSS code with sections rearranged to place certifications between skills and services, assuming you want a simple vertical layout:
-
-CSS
 /*=============== SKILLS ===============*/
 .skills{
   background-color: var(--container-color);
@@ -404,17 +401,14 @@ CSS
 }
 
 .certifications__container {
-  display: flex;
-  flex-wrap: wrap; 
+    display: flex;
     justify-content: center;
-  gap: 2rem; 
-}
+    gap: 2rem;
+  }  
 
-.certifications__item {
-  width: 300px; 
-    position: relative;
-}
-
+  .certifications__item {
+    width: 250px;
+  
 .cert__img {
   width: 100%;
   height: auto; 
@@ -710,6 +704,12 @@ CSS
   }
   .home__container,
   .about__conatiner,
+  .certifications__container {
+    flex-wrap: nowrap; 
+  }
+  .certifications__item {
+    width: calc(50% - 1rem); 
+  }
   .skills__container{
     grid-template-columns: repeat(2,1fr);
     align-items: center;
