@@ -403,7 +403,7 @@ svg {
   
   .certifications__data {
     position: relative; 
-    background: var(--container-color);
+    background-color: var(--container-color);
     padding: 1rem;
     box-sizing: border-box;
     transform: translateY(0); 
