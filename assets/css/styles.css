@@ -410,14 +410,7 @@ svg {
   .certifications__item {
     width: 300px;
     position: relative;
-  }
-  
-  .cert__img {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    overflow: hidden;
-  }
+    overflow: hidden; 
   
   .certifications__data {
     position: absolute;
@@ -429,12 +422,10 @@ svg {
     box-sizing: border-box;
     transform: translateY(100%);
     transition: transform 0.4s;
-    opacity: 0; 
   }
   
   .certifications__item:hover .certifications__data {
     transform: translateY(0);
-    opacity: 1; 
   }
   
   .certifications__name {
