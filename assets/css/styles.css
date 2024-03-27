@@ -425,6 +425,7 @@ svg {
   .cert__img {
     border-radius: 1rem;
     margin-bottom: 0.5rem; 
+    text-align: center; 
   }
   
   .certifications__list {
