@@ -405,7 +405,6 @@ svg {
   .certifications__data {
     position: relative; 
     width: 100%;
-    max-width: 300px; /* Set maximum width */
     background: var(--container-color);
     padding: 1rem;
     box-sizing: border-box;
