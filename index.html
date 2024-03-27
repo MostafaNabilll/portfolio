@@ -1,40 +1,339 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <!-- Your about content goes here -->
-    </section>
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
 
-    <section id="projects" class="projects">
-        <h2>Projects</h2>
-        <!-- Your projects content goes here -->
-    </section>
+      <!--=============== REMIXICONS ===============-->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
 
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <form id="contact-form">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css">
 
-    <script src="assets/js/script.js"></script>
-</body>
+      <title>Responsive portfolio website - Bedimcode</title>
+   </head>
+   <body>
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+         <nav class="nav container">
+            <a href="#" class="nav__logo">
+               Yash Kumar <span>Jain</span>
+            </a>
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="#home" class="nav__link active-link">Home</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#about" class="nav__link active-link">About</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#services" class="nav__link active-link">Services</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#projects" class="nav__link active-link">Projects</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#contacts" class="nav__link active-link">Contacts</a>
+                  </li>
+               </ul>
+               <div class="nav__close" id="nav-close">
+                  <i class="ri-close-line"></i>
+               </div>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-menu-line"></i>
+            </div>
+         </nav>
+      </header>
+
+      <!--==================== MAIN ====================-->
+      <main class="main">
+         <!--==================== HOME ====================-->
+         <section class="home section" id="home">
+            <div class="home__container container grid">
+               <div class="home__content">
+                  <div class="home__data">
+                     <h3 class="home__subtitle">
+                        Hello, <span>I'm</span>
+                     </h3>
+                     <h1 class="home__title">Yash Kumar Jain</h1>
+                     <h3 class="home__education">Data Engineer</h3>
+                     <p class="home__description"> Data enthusiast with a strong background in Python, SQL, ML, Big Data and data visualization tools, seeking full-time
+                        opportunities in Data Engineer roles. Skilled in developing data pipelines, Data Distribution, and data models using
+                        AWS, DBT, Tableau and Python. Strong problem-solving and communication skills, with experience collaborating with
+                        business and engineering teams.
+                        </p>
+                        <a href="#contact" class="button">Let's Talk</a>
+                  </div>
+                  <div class="home__social">
+                     <a href="https://github.com/yashjain02/" target="_blank" class="home__social-link">
+                        <i class="ri-github-fill"></i>
+                     </a>
+                     <a href="https://www.linkedin.com/in/yashkumar-jain/" target="_blank" class="home__social-link">
+                        <i class="ri-linkedin-box-line"></i>
+                     </a>
+                  </div>
+               </div>
+               <div class="home__image">
+                  <svg class="home__blob" viewBox="0 0 550 591" xmlns="http://www.w3.org/2000/svg">
+                     <mask id="maskBlob" mask-type="alpha">
+                        <path d="M263 47.1782C270.426 42.891 279.574 42.891 287 47.1782L501.157 
+                        170.822C508.583 175.109 513.157 183.032 513.157 191.606V438.894C513.157 
+                        447.468 508.583 455.391 501.157 459.678L287 583.322C279.574 587.609 270.426 
+                        587.609 263 583.322L48.843 459.678C41.4174 455.391 36.843 447.468 36.843 
+                        438.894V191.606C36.843 183.032 41.4174 175.109 48.843 170.822L263 47.1782Z"/>
+                     </mask>
+                     <g mask="url(#maskBlob)">
+                        <path d="M263 47.1782C270.426 42.891 279.574 42.891 287 47.1782L501.157 
+                        170.822C508.583 175.109 513.157 183.032 513.157 191.606V438.894C513.157 
+                        447.468 508.583 455.391 501.157 459.678L287 583.322C279.574 587.609 270.426 
+                        587.609 263 583.322L48.843 459.678C41.4174 455.391 36.843 447.468 36.843 
+                        438.894V191.606C36.843 183.032 41.4174 175.109 48.843 170.822L263 47.1782Z"/>
+                  
+                        <rect x="37" width="476" height="630" fill="url(#pattern0)"/>
+                     </g>
+                  
+                     <rect x="37" width="476" height="300" fill="url(#pattern1)"/>
+                  
+                     <defs>
+                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                           <use href="#imageBlob" transform="matrix(0.00143057 0 0 0.00108108 0.0404062 0)"/>
+                        </pattern>
+                  
+                        <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+                           <use href="#imageBlob" transform="matrix(0.00143057 0 0 0.00226984 0.0404062 0)"/>
+                        </pattern>
+                  
+                        <!-- Insert your profile (recommended size: 640 x 940) -->
+                        <image class="home__img" id="imageBlob" width="640" height="940" href="assets/img/perfil.png"/>
+                     </defs>
+                  </svg>
+               </div>
+            </div>
+         </section>
+
+         <!--==================== ABOUT ====================-->
+         <section class="about section" id="about">
+            <div class="about__container container grid">
+               <div class="about__data">
+                  <h3 class="section__subtitle">
+                     My <span>Intro</span>
+                  </h3>
+                  <h2 class="section__title">About Me</h2>
+                  <p class="about__description">
+                    I am a skilled and dedicated data engineer with expertise 
+                     in data management, ETL processes, and data integration techniques.
+                     Proficient in SQL and programming languages like Python, Java, 
+                     or Scala, I excel at designing and building robust data pipelines 
+                     to drive efficient data processing and transformation. 
+                     With a strong background in cloud platforms like AWS,
+                     I am committed to delivering scalable solutions that unlock the power of data for business growth.
+                  </p>
+                  <a href="#contact" class="button">Contact Me</a>
+               </div>
+            </div>
+         </section>
+
+         <!--==================== SKILLS ====================-->
+         <section class="skills section">
+            <div class="skills__container container grid">
+               <div class="skills__data">
+                  <h3 class="section__subtitle">
+                     Favorite <span>skills</span>
+                  </h3>
+                  <h2 class="section__title">
+                     My skills
+                  </h2>
+                  <p class="skills__description">See fully what skills I have and perform, 
+                     to develop the projects for you.</p>
+                     <a href="#projects" class="button">See Projects</a>
+               </div>
+               <div class="skills__content">
+                  <ol class="skills__group">
+                     <li class="skills__item">AWS</li>
+                     <li class="skills__item">Airflow</li>
+                     <li class="skills__item">NoSQL</li>
+                     <li class="skills__item">SQL</li>
+                  </ol>
+
+                  <ol class="skills__group" start="5">
+                     <li class="skills__item">Docker</li>
+                     <li class="skills__item">ML</li>
+                     <li class="skills__item">NLP</li>
+                  </ol>
+               </div>
+            </div>
+         </section>
+
+         <!--==================== SERVICES ====================-->
+         <section class="services section" id="services">
+            <h3 class="section__subtitle">
+               My <span>Services</span>
+            </h3>
+            <h2 class="section__title">
+               My Experience
+            </h2>
+            <div class="services__conatiner conatiner grid">
+               <article class="services__card">
+                  <i class="ri-hospital-line services__icon"></i>
+                  <h2 class="services__title"> Software Engineer(1.5 years)</h2>
+                  <h2 class="services__subtitle">Cerner Healthcare</h2>
+                     <p class="services__description">
+                        Worked with C# and SQL to design, 
+                        code and test the healthcare application.
+                     </p>
+                 
+               </article>
+
+               <article class="services__card">
+                  <i class="ri-database-2-fill services__icon"></i>
+                  <h2 class="services__title"> Data Engineer</h2>
+                  <h2 class="services__subtitle">Algolia</h2>
+                     <p class="services__description">
+                        Worked with AWS( Glue, Airflow, S3, EMR, Athena), Dbt, CircleCi, SQL and 
+                        Python to build, test, maintain and deploy the data pipelines.
+                     </p>
+                 
+               </article>
+            </div>
+         </section>
+
+         <!--==================== PROJECTS ====================-->
+         <section class="projects section" id="projects">
+            <h3 class="section__subtitle">My<span> Projects</span> </h3>
+            <h2 class="section__title">Recent Projects</h2>
+
+            <div class="projects__container container grid">
+               <article class="projects__card">
+                  <img src="assets/img/project-img-1.jpg" alt="projects image" class="projects__img">
+                  <div class="projects__model">
+                     <span class="projects__subtitle">Named Entity Recognition</span>
+                     <h2 class="projects__title">Few Shot Learning with NLP</h2>
+                     <a href="https://github.com/yashjain02/Few-shot-Name-Entity-Recognition" class="projects__button">
+                        view Demo <i class="ri-external-link-line"></i>
+                     </a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <img src="assets/img/project-img-2.jpg" alt="projects image" class="projects__img">
+                  <div class="projects__model">
+                     <span class="projects__subtitle">Loan Prediction using ML, Airflow</span>
+                     <h2 class="projects__title">Loan Prediction</h2>
+                     <a href="https://github.com/yashjain02/Loan-Prediction-TheVectors" class="projects__button">
+                        view Demo <i class="ri-external-link-line"></i>
+                     </a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <img src="assets/img/project-img-3.jpg" alt="projects image" class="projects__img">
+                  <div class="projects__model">
+                     <span class="projects__subtitle">Chess position Prediction</span>
+                     <h2 class="projects__title">Computer vision</h2>
+                     <a href="https://github.com/yashjain02/Chess-Position-Prediction-ComputerVision" class="projects__button">
+                        view Demo <i class="ri-external-link-line"></i>
+                     </a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <img src="assets/img/project-img-4.jpg" alt="projects image" class="projects__img">
+                  <div class="projects__model">
+                     <span class="projects__subtitle">Fake News Detection</span>
+                     <h2 class="projects__title">NLP and ML</h2>
+                     <a href="https://github.com/yashjain02/Fake-News-Detection_NLP" class="projects__button">
+                        view Demo <i class="ri-external-link-line"></i>
+                     </a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <img src="assets/img/project-img-5.jpg" alt="projects image" class="projects__img">
+                  <div class="projects__model">
+                     <span class="projects__subtitle">BookMySpace</span>
+                     <h2 class="projects__title">Web App</h2>
+                     <a href="https://github.com/yashjain02/BookMySpace" class="projects__button">
+                        view Demo <i class="ri-external-link-line"></i>
+                     </a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <img src="assets/img/project-img-6.jpg" alt="projects image" class="projects__img">
+                  <div class="projects__model">
+                     <span class="projects__subtitle">House price prediction</span>
+                     <h2 class="projects__title">Machine Learning</h2>
+                     <a href="https://github.com/yashjain02/House-Price-Prediction" class="projects__button">
+                        view Demo <i class="ri-external-link-line"></i>
+                     </a>
+                  </div>
+               </article>
+            </div>
+         </section>
+
+         <!--==================== CONTACT ====================-->
+         <section class="contact section" id="contact">
+            <h3 class="section__subtitle">
+               Get In <span>Touch</span>
+            </h3>
+            <h2 class="section__title">
+               Contact Me
+            </h2>
+            <div class="contact__container container grid">
+               <form action="" class="contact__form" id="contact-form">
+                  <div class="contact__group">
+                     <input type="text" name="user_name" required placeholder="Enter your name" class="contact__input">
+                     <input type="email" name="user_email" required placeholder="Enter your email" class="contact__input">
+                  </div>
+                  <textarea name="user_project" id="" cols="30" rows="10" required placeholder="Enter your message" class="contact__input"></textarea>
+                  <p class="contact__message" id="contact-message"></p>
+                  <button type="submit" class="button contact__button">
+                     Send Message
+                  </button>
+               </form>
+            </div>
+         </section>
+      </main>
+
+      <!--==================== FOOTER ====================-->
+      <footer class="footer">
+         <div class="footer__container conatiner grid">
+            <div>
+               <h1 class="footer__title">
+                  Yash Kumar <span>Jain</span>
+               </h1>
+               <h2 class="footer__education">
+                  Data Engineer
+               </h2>
+            </div>
+            <div class="footer__social">
+               <a href="https://www.linkedin.com/in/yashkumar-jain/" target="_blank" class="footer__social-link">
+                  <i class="ri-linkedin-box-line"></i>
+               </a>
+               <a href="https://github.com/yashjain02" target="_blank" class="footer__social-link">
+                  <i class="ri-github-fill"></i>
+               </a>
+            </div>
+         </div>
+      </footer>
+
+      <!--========== SCROLL UP ==========-->
+      <a href="#" class="scrollup" id="scroll-up">
+         <i class="ri-arrow-up-line"></i>
+      </a>
+
+      <!--=============== SCROLLREVEAL ===============-->
+      <script src="assets/js/scrollreveal.min.js"></script>
+
+      <!--=============== EMAIL JS ===============-->
+      
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+   </body>
 </html>
