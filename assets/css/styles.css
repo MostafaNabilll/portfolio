@@ -401,14 +401,17 @@ svg {
 }
 
 .certifications__container {
-    display: flex;
+  display: flex;
+  flex-wrap: wrap; 
     justify-content: center;
-    gap: 2rem;
-  }  
+  gap: 2rem; 
+}
 
-  .certifications__item {
-    width: 250px;
-  
+.certifications__item {
+  width: 300px; 
+    position: relative;
+}
+
 .cert__img {
   width: 100%;
   height: auto; 
