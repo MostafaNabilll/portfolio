@@ -311,7 +311,7 @@ svg {
 }
 
 .home__img{
-  width: 500px;
+  width: 800px;
   transform: translateX(-120px);
 }
 /*=============== BUTTON ===============*/
@@ -404,6 +404,7 @@ svg {
   .certifications__data {
     position: relative; 
     width: 100%;
+    max-width: 300px; /* Adjust as needed */
     background: var(--container-color);
     padding: 1rem;
     box-sizing: border-box;
@@ -414,14 +415,16 @@ svg {
   .certifications__item:hover .certifications__data {
     transform: translateY(-100%); 
   }
-
+  
   .certifications__name {
     color: var(--title-color);
     font-size: var(--small-font-size);
     margin: 0; 
     text-align: center; 
-
+  }
+  
   .cert__img {
+    width: 100%;
     height: auto;
     border-radius: 1rem;
     margin-bottom: 0.5rem; 
@@ -435,8 +438,7 @@ svg {
   .certifications__item {
     margin-bottom: 2rem;
   }
-  
-/*=============== SERVICES ===============*/
+  /*=============== SERVICES ===============*/
 .services__conatiner{
   row-gap: 2rem;
   padding-block:1rem;
