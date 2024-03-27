@@ -43,32 +43,25 @@ const blurHeader = () => {
 window.addEventListener('scroll', blurHeader);
 
 
-/*=============== EMAIL JS ===============*/
 
 /*=============== EMAIL JS ===============*/
-const contactForm = document.getElementById('contact-form');
-const contactMessage = document.getElementById('contact-message');
+
+const contactForm = document.getElementById('contact-form'),
+  contactMessage = document.getElementById('contact-message');
 
 const sendEmail = (e) => {
   e.preventDefault();
-  console.log("Email form submitted");
-  const templateParams = {
-    user_name: contactForm.elements['user_name'].value,
-    user_email: contactForm.elements['user_email'].value,
-    user_project: contactForm.elements['user_project'].value
-  };
-
-  emailjs.sendForm('service_jkf0yra', 'template_ghlew1n', templateParams, '1adDy5qMO3Z8mWHpX')
-  .then(() => {
-    console.log("Email sent successfully");
-    setTimeout(() => {
-      contactMessage.textContent = '';
-    }, 5000);
-    contactForm.reset();
-  }, () => {
-    console.log("Email sending failed");
-    contactMessage.textContent = 'Message not sent❌';
-  });
+  emailjs.sendForm('service_jkf0yra', 'template_ghlew1n', '#contact-form', '1adDy5qMO3Z8mWHpX')
+    .then(() => {
+      console.log("Email sent successfully");
+      setTimeout(() => {
+        contactMessage.textContent = '';
+      }, 5000);
+      contactForm.reset();
+    }, () => {
+      console.log("Email sending failed");
+      contactMessage.textContent = 'Message not sent❌';
+    });
 }
 contactForm.addEventListener('submit', sendEmail);
 
