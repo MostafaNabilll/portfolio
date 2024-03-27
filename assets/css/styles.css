@@ -403,8 +403,6 @@ svg {
   
   .certifications__data {
     position: relative; 
-    width: 100%;
-    max-width: 300px; /* Adjust as needed */
     background: var(--container-color);
     padding: 1rem;
     box-sizing: border-box;
@@ -425,8 +423,6 @@ svg {
   }
   
   .cert__img {
-    width: 100%;
-    height: auto;
     border-radius: 1rem;
     margin-bottom: 0.5rem; 
   }
