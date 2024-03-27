@@ -94,7 +94,7 @@ const sr =ScrollReveal({
     distance: '60px',
     duration: 2500,
     delay: 400,
-    //reset: true
+    reset: true
 })
 sr.reveal('.home__data, .home__social, .contact__container, .footer__container')
 sr.reveal('.home__image', {origin:'bottom'})

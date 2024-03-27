@@ -493,6 +493,62 @@ svg {
 .projects__card:hover .projects__model{
   bottom: 0;
 }
+
+/*=============== CERTIFICATIONS ===============*/
+.certifications {
+    background-color: var(--container-color);
+  }
+  
+  .certifications__container {
+    row-gap: 2rem;
+    justify-content: center;
+    padding-block: 1rem;
+  }
+  
+  .certifications__data {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  
+  .cert__img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .certifications__data {
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 0%, #52acf6 120%);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: bottom 0.4s; /* Add transition property */
+  }
+  
+  .certifications__name {
+    color: var(--title-color);
+    font-size: var(--small-font-size);
+    margin-bottom: .25rem;
+  }
+  
+  .certifications__title {
+    font-size: var(--h2-font-size);
+    margin-bottom: .74rem;
+  }
+  
+  .certifications__item:hover .certifications__data {
+    bottom: 0;
+  }
+  
+  
 /*=============== CONTACT ===============*/
 .contact__container{
   padding-top: 1rem;
