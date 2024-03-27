@@ -51,26 +51,26 @@ const contactMessage = document.getElementById('contact-message');
 
 const sendEmail = (e) => {
   e.preventDefault();
-
+  console.log("Email form submitted");
   const templateParams = {
     user_name: contactForm.elements['user_name'].value,
     user_email: contactForm.elements['user_email'].value,
     user_project: contactForm.elements['user_project'].value
   };
 
-  emailjs.send('service_jkf0yra', 'template_ghlew1n', templateParams)
-    .then((response) => {
-      console.log('Email sent successfully:', response);
-      contactMessage.textContent = 'Message sent successfully ✅';
-      contactForm.reset();
-    }, (error) => {
-      console.error('Email sending failed:', error);
-      contactMessage.textContent = 'Message not sent ❌';
-    });
-};
-
+  emailjs.sendForm('service_jkf0yra', 'template_ghlew1n', templateParams, '1adDy5qMO3Z8mWHpX')
+  .then(() => {
+    console.log("Email sent successfully");
+    setTimeout(() => {
+      contactMessage.textContent = '';
+    }, 5000);
+    contactForm.reset();
+  }, () => {
+    console.log("Email sending failed");
+    contactMessage.textContent = 'Message not sent❌';
+  });
+}
 contactForm.addEventListener('submit', sendEmail);
-
 
 /*=============== SHOW SCROLL UP ===============*/
 const scrollUp = () => {
