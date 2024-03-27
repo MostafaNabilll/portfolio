@@ -141,7 +141,7 @@ svg {
 }
 
 .section__subtitle {
-  font-size: var(--small-font-size);
+  font-size: var(--normal-font-size);
   margin-bottom: .25rem;
 }
 
@@ -305,13 +305,13 @@ svg {
 }
 
 .home__blob{
-  width:320px;
+  width:170px;
   fill: var(--first-color);
   filter: drop-shadow(0 12px 12px #90CAF9)
 }
 
 .home__img{
-  width: 800px;
+  width: 850px;
   transform: translateX(-120px);
 }
 /*=============== BUTTON ===============*/
@@ -396,47 +396,55 @@ svg {
 
 /*=============== CERTIFICATIONS ===============*/
 .certifications__container {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-  }
-  
-  .certifications__data {
-    position: relative; 
-    background-color: var(--container-color);
-    padding: 1rem;
-    box-sizing: border-box;
-    transform: translateY(0); 
-    transition: transform 0.4s;
-  }
-  
-  .certifications__item:hover .certifications__data {
-    transform: translateY(-50%); 
-    opacity: 0.5;
-  }
-  
-  .certifications__name {
-    color: var(--title-color);
-    font-size: var(--small-font-size);
-    margin: 0; 
-    text-align: center; 
-  }
-  
-  .cert__img {
-    display: block;
-    border-radius: 1rem;
-    margin-bottom: 0.5rem; 
-    margin: 0 auto;
-  }
-  
-  .certifications__list {
-    list-style: none;
-    padding: 0; 
-  }
-  
-  .certifications__item {
-    margin-bottom: 2rem;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.certifications__data {
+  text-align: center;
+  background-color: var(--container-color);
+  padding: 1rem;
+  box-sizing: border-box;
+  transform: translateY(0); 
+  transition: transform 0.4s;
+  margin-bottom: 1rem; 
+}
+
+.certifications__item:hover .certifications__data {
+  transform: translateY(-50%); 
+  opacity: 0.5;
+}
+
+.certifications__name {
+  color: var(--title-color);
+  font-size: var(--small-font-size);
+  margin: 0; 
+  text-align: center; 
+}
+
+.cert__img {
+  display: block;
+  border-radius: 1rem;
+  margin-bottom: 0.5rem; 
+  margin: 0 auto;
+}
+
+.certifications__list {
+  list-style: none;
+  padding: 0; 
+}
+
+.certifications__item {
+  margin-bottom: 2rem;
+}
+
+.cert__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
   /*=============== SERVICES ===============*/
 .services__conatiner{
   row-gap: 2rem;
@@ -463,7 +471,7 @@ svg {
   margin-bottom: 1.5rem;
 }
 .services__subtitle{
-  font-size: var(--h3-font-size);
+  font-size: var(--h2-font-size);
   color: var(--first-color);
 }
 .services__card:hover{
