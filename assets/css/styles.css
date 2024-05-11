@@ -895,9 +895,6 @@ svg {
   .contact__form textarea{
     height: 20rem;
   }
-  .contact__message{
-    co-items: center;
-  }
   .footer{
     padding-block: 4.5rem 4rem
   }
