@@ -26,6 +26,8 @@
   --text-color: hsl(228, 8%, 65%);
   --body-color: hsl(228, 15%, 20%);
   --container-color: hsl(228, 15%, 15%);
+  --footer-color: hsl(231, 12%, 32%);
+  --contacts-color: #2b2e3b;
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -116,7 +118,8 @@ svg {
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 1120px;
-  margin-inline: 1.5rem;
+  margin: auto;
+  padding: 0 1.5rem;
 }
 
 .grid {
@@ -125,32 +128,42 @@ svg {
 }
 
 .section {
-  padding-block: 5rem 2rem;
+  padding: 3rem 1.5rem;
+  position: relative;
+  text-align: center; 
 }
 
 .section__title, 
 .section__subtitle {
   text-align: center;
   color: var(--title-color);
-  font-weight: var(--font-semi-bold);
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .section__title {
+  text-align: center;
   font-size: var(--h1-font-size);
-  margin-bottom: 1.5rem;
+  color: var(--title-color);
+  margin-bottom: 10px;
 }
 
 .section__subtitle {
-  font-size: var(--normal-font-size);
-  margin-bottom: .25rem;
+  text-align: center;
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  margin-top: -20px;
+  position: relative;
 }
 
 .section__subtitle span {
   color: var(--first-color);
 }
 
-.main {
-  overflow: hidden; /* For animation ScrollReveal */
+.skills__container, .about__container, .certifications__container {
+  max-width: 1120px; 
+  margin: 0 auto; 
+  padding: 1.5rem; 
 }
 
 /*=============== HEADER & NAV ===============*/
@@ -357,9 +370,12 @@ svg {
 
 }
 
-.skills__container{
-  padding-bottom: 2rem;
-  row-gap: 3.5rem;
+.skills__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  gap: 20px;  
+  padding: 20px;  
 }
 
 .skills__data{
@@ -373,11 +389,12 @@ svg {
 .skills_group{
   display: grid;
 }
-.skills__content{
-  grid-template-columns: repeat(2, max-content);
-  column-gap: 4rem;
-  justify-content: center;
-  align-items: baseline;
+.skills__content {
+  display: flex; 
+  flex-wrap: wrap;  
+  justify-content: center;  
+  gap: 10px;  
+  width: 100%;  
 }
 
 .skills__group{
@@ -385,107 +402,142 @@ svg {
   list-style: decimal-leading-zero;
 }
 
-.skills__item{
-  font-weight: var(--font-medium);
+.skills__item {
+  background: var(--container-color);
+  padding: 10px 15px;
+  border-radius: 5px;
   color: var(--title-color);
+  font-weight: var(--font-medium);
 }
 
 .skills__item::marker{
   color: var(--first-color);
 }
 
-/*=============== CERTIFICATIONS ===============*/
+/*===============Certification===============*/
+
 .certifications__container {
   display: flex;
-  flex-direction: column;
-  align-items: center; 
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 20px;
 }
 
-.certifications__data {
-  text-align: center;
-  background-color: var(--container-color);
-  padding: 1rem;
-  box-sizing: border-box;
-  transform: translateY(0); 
-  transition: transform 0.4s;
-  margin-bottom: 1rem; 
-}
-
-.certifications__item:hover .certifications__data {
-  transform: translateY(-50%); 
-  opacity: 0.5;
-}
-
-.certifications__name {
-  color: var(--title-color);
-  font-size: var(--small-font-size);
-  margin: 0; 
-  text-align: center; 
-}
-
-.cert__img {
-  display: block;
-  border-radius: 1rem;
-  margin-bottom: 0.5rem; 
-  margin: 0 auto;
-}
-
-.certifications__list {
-  list-style: none;
-  padding: 0; 
-}
-
-.certifications__item {
-  margin-bottom: 2rem;
-}
-
-.cert__info {
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-  /*=============== SERVICES ===============*/
-.services__conatiner{
-  row-gap: 2rem;
-  padding-block:1rem;
-}
-
-.services__card{
+  justify-content: center;
   text-align: center;
   background-color: var(--container-color);
-  padding: 3rem 1.25rem;
-  border-radius: 1rem;
-  border: 2px solid var(--container-color);
-  transition: border .4s;
+  padding: 0.8rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 300px;
+  margin: 10px;
+  gap: 20px; 
 }
 
-.services__icon{
-  display: block;
-  font-size: 4rem;
-  color: var(--first-color);
-  margin-bottom: .75rem;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
-.services__title{
+
+.card__img {
+  width: 100%; 
+  border-radius: 12px;
+}
+
+.card__title {
   font-size: var(--h3-font-size);
-  margin-bottom: 1.5rem;
+  color: var(--title-color);
+  margin: 0.5rem 0;
 }
-.services__subtitle{
+
+.card__subtitle {
   font-size: var(--h2-font-size);
   color: var(--first-color);
-}
-.services__card:hover{
-  border: 2px solid var(--first-color);
-}
-/*=============== PROJECTS ===============*/
-.projects{
-  background-color: var(--container-color);
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
+.card__description {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+}
+
+.card__button {
+  background-color: var(--first-color);
+  color: var(--title-color);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.card__button:hover {
+  background-color: var(--first-color-alt);
+}
+
+/*=============== Services ===============*/
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--container-color);
+  padding: 60px;
+}
+
+.services__container {
+  display: flex;
+  width: 65%; 
+  justify-content: space-evenly; 
+  gap: 20px; 
+}
+
+.service-card {
+  flex-basis: calc(50% - 10px);
+  background-color: #333A50;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.service-card__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.service-card__logo {
+  width: 50px;
+  height: auto;
+  margin-right: 15px;
+}
+
+.service-card__description {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+.services__subtitle {
+  font-size: var(--h3-font-size);
+  text-align: center; 
+  width: 100%; 
+  margin-top: 10px;
+  margin-bottom: 10px;}
+
+/*=============== PROJECTS ===============*/
 .projects__container{
   row-gap: 2rem;
   justify-content: center;
   padding-block:1rem;
+  padding: 20px;
 }
 .projects__card{
   position: relative;
@@ -519,12 +571,9 @@ svg {
 .projects__button{
   color: var(--title-color);
   font-size: var(--small-font-size);
-}
-
-.projects__subtitle{
-  color: var(--title-color);
   display: block;
-  margin-bottom: .25rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .projects__title{
@@ -547,8 +596,9 @@ svg {
 }
 
 /*=============== CONTACT ===============*/
-.contact__container{
-  padding-top: 1rem;
+.contact {
+  background-color: var(--container-color);
+  padding: 20px;
 }
 
 .contact__form,
@@ -563,7 +613,7 @@ svg {
 .contact__input{
   padding: 1rem 1.25rem;
   border-radius: .5rem;
-  background-color: var(--container-color);
+  background-color: var(--contacts-color);
   color: var(--title-color);
 }
 
@@ -588,11 +638,8 @@ svg {
   font-size: var(--small-font-size);
   color: var(--title-color);
 }
+
 /*=============== FOOTER ===============*/
-.footer{
-  background-color: var(--container-color);
-  padding-block: 3.5rem 2rem;
-}
 .footer__container{
   row-gap: 2rem;
   text-align: center;
@@ -614,7 +661,7 @@ svg {
 .footer__social{
   display: flex;
   justify-content: center;
-  column-gap: 1.25rem;
+  column-gap: .75rem;
 }
 
 .footer__social-link{
@@ -632,7 +679,7 @@ svg {
 }
 .footer__copy{
   font-size: var(--smaller-font-size);
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar{
@@ -860,7 +907,7 @@ svg {
     text-align: center;
   }
   .footer__title{
-    font-size: var(--bigger-font-size);
+    font-size: var(--normal-font-size);
     justify-content: center;
   }
   .footer__social{
